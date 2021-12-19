@@ -18,6 +18,12 @@
   padding-left: 70px;
 }
 
+.navbar__logoImg {
+  width: 10em;
+  margin-top: -20px;
+  margin-bottom: -10px;
+}
+
 .navbar__menuList {
   display: flex;
   justify-content: space-around;
@@ -32,6 +38,7 @@
 
 .navbar__contactBtn {
   border: 2px solid var(--primary);
-  border-radius: 2px;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: var(--primary);
 }

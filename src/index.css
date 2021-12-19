@@ -5,9 +5,11 @@
 }
 
 :root {
-  --primary: blue;
+  --primary: #eb462e;
+  --secondary: #fff3d7;
   --light: #fff;
   --dark: #202020;
+  --grey: #949494;
 }
 
 body {
@@ -35,6 +37,7 @@ body {
 
 .noLink {
   text-decoration: none;
+  color: inherit;
 }
 
 /* @media (max-width: 648px) {

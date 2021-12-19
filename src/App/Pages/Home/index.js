@@ -1,22 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer";
+
+import { variants } from "../../utils/animations";
 import "./styles.css";
 
 const Home = () => {
-  const variants = {
-    hidden: { opacity: 0, y: 0 },
-    visible: {
-      opacity: 1,
-      y: -10,
-      transition: {
-        duration: 0.5,
-        type: "tween",
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
   return (
     <div className='home__container'>
       <motion.div
@@ -41,24 +30,7 @@ const Home = () => {
         className='home__horizontalLine'
       ></motion.div>
 
-      <motion.div
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true }}
-        variants={variants}
-        className='home__footer'
-      >
-        <motion.p variants={variants}>
-          I also <b>embrace</b> branding, designing advertisements and making
-          posters.
-        </motion.p>
-
-        <motion.p variants={variants}>
-          <Link className='noLink' to='/'>
-            see more
-          </Link>
-        </motion.p>
-      </motion.div>
+      <Footer />
     </div>
   );
 };

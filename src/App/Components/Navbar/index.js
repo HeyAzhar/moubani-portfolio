@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import logo from "../../../Assets/logo.svg";
 import "./styles.css";
 
 const Navbar = () => {
@@ -26,7 +29,9 @@ const Navbar = () => {
         variants={variants}
         className='navbar__logo'
       >
-        <motion.h2>M O U B A N I</motion.h2>
+        <Link className='noLink' to='/'>
+          <img className='navbar__logoImg' src={logo} />
+        </Link>
       </motion.div>
 
       {/* MENU */}
@@ -37,14 +42,31 @@ const Navbar = () => {
         variants={variants}
         className='navbar__menuList'
       >
-        <motion.li variants={variants}>Projects</motion.li>
-        <motion.li variants={variants}>UK Studio Practices</motion.li>
-        <motion.li variants={variants}>Embrace</motion.li>
-        <motion.li variants={variants}>About</motion.li>
-        <motion.li variants={variants}>Resume</motion.li>
-        <motion.li variants={variants} className='navbar__contactBtn'>
-          Contact me
+        <motion.li variants={variants}>
+          <Link className='noLink' to='about'>
+            Projects
+          </Link>
         </motion.li>
+        <motion.li variants={variants}>
+          <Link className='noLink' to='about'>
+            UX Studio Practices
+          </Link>
+        </motion.li>
+        <motion.li variants={variants}>
+          <Link className='noLink' to='about'>
+            Embrace
+          </Link>
+        </motion.li>
+        <motion.li variants={variants}>
+          <Link className='noLink' to='about'>
+            About
+          </Link>
+        </motion.li>
+        <Link className='noLink' to='about'>
+          <motion.li variants={variants} className='navbar__contactBtn'>
+            Resume
+          </motion.li>
+        </Link>
       </motion.ul>
     </div>
   );
