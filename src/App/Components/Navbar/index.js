@@ -30,7 +30,7 @@ const Navbar = () => {
         className='navbar__logo'
       >
         <Link className='noLink' to='/'>
-          <img className='navbar__logoImg' src={logo} />
+          <img className='navbar__logoImg' alt='' src={logo} />
         </Link>
       </motion.div>
 

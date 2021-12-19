@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer";
 
 import { variants } from "../../utils/animations";
