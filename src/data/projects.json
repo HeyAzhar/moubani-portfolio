@@ -1,0 +1,15 @@
+{
+  "title": "New York",
+  "description": "Hey, it looks good!",
+  "coverImage": "cover-image.jpg",
+  "team": "Moubani",
+  "date": "12th Dec 2021",
+
+  "contentOne": "Hey",
+  "imageOne": "hey.jpg",
+  "imageOneDesc": "heyy",
+
+  "contentTwo": "Hello",
+  "imageTwo": "hello.jpg",
+  "imageTwoDesc": "helloo"
+}

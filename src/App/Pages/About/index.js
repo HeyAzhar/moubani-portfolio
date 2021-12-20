@@ -1,5 +1,10 @@
 import Me from "../../../Assets/me.jpg";
-import icon from "../../../Assets/Icons/close-menu.svg";
+import behance from "../../../Assets/Icons/behance.svg";
+import linkedin from "../../../Assets/Icons/linkedin.svg";
+import cook from "../../../Assets/Icons/cook.svg";
+import music from "../../../Assets/Icons/music.svg";
+import driving from "../../../Assets/Icons/driving.svg";
+import teaTale from "../../../Assets/Icons/tea.svg";
 import "./styles.css";
 
 const About = () => {
@@ -18,13 +23,22 @@ const About = () => {
 
           <div className='about__socialIconContainer'>
             <div className='about__socialIcon'>
-              <img src={icon} alt='' />
+              <a
+                rel='noreferrer'
+                target='_blank'
+                href='https://www.behance.net/IamMoubani'
+              >
+                <img src={behance} alt='' />
+              </a>
             </div>
             <div className='about__socialIcon'>
-              <img src={icon} alt='' />
-            </div>
-            <div className='about__socialIcon'>
-              <img src={icon} alt='' />
+              <a
+                rel='noreferrer'
+                target='_blank'
+                href='https://www.linkedin.com/in/moubanircdesign'
+              >
+                <img src={linkedin} alt='' />
+              </a>
             </div>
           </div>
 
@@ -82,12 +96,73 @@ const About = () => {
 
         <p>
           Empathetic, collaborative, committed, and a human-loving extrovert
-          with a desire to learn more, have meaningful conversations,, keeping
-          an open mind.
+          with a desire to learn more, have meaningful conversations, keeping an
+          open mind.
         </p>
+      </div>
+
+      {/* LANG */}
+
+      <div className='about__lang'>
+        <h3>SPOKEN LANGUAGES</h3>
+
+        <p>
+          English (UK and US) | Spanish (Basic) | Hindi (Proficient) | Bengali
+          (Native)
+        </p>
+      </div>
+
+      <div className='about_horizontalLine'></div>
+
+      {/* FUN FACTS */}
+
+      <div className='about__funFact'>
+        <h3>FUN FACTS</h3>
+
+        <div>
+          <FunFact
+            icon={teaTale}
+            title='Tea tales'
+            description="I'm a certified tea taster with 3.5years of industry experience"
+          />
+          <FunFact
+            icon={cook}
+            title='Spice of life'
+            description="I'm a food connoisseur and someday wish to have my own restaurant.
+"
+          />
+          <FunFact
+            icon={driving}
+            title='Go slow!'
+            description='I was called Lady-Schumacher for my driving skills'
+          />
+          <FunFact
+            icon={music}
+            title='The sound of music'
+            description="I grew up in a musical family and that's the way to my heart."
+          />
+        </div>
       </div>
     </div>
   );
 };
 
 export default About;
+
+const FunFact = ({ icon, title, description }) => {
+  return (
+    <div className='funFact__container'>
+      <div className='funFact__icon'>
+        <img src={icon} alt='' />
+      </div>
+
+      <div className='funFact__title'>
+        <p>{title}</p>
+      </div>
+
+      <div className='funFact__description'>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+};
