@@ -6,14 +6,16 @@
 
 :root {
   --primary: #eb462e;
-  --secondary: #fff3d7;
+  --secondary: #fff7e4;
+  --tercary: #ffedc4;
   --light: #fff;
   --dark: #202020;
   --grey: #6a6a6a;
 }
 
 body {
-  color: #202020;
+  color: var(--dark);
+  background-color: var(--secondary);
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

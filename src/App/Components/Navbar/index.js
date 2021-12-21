@@ -43,7 +43,7 @@ const Navbar = () => {
         className='navbar__menuList'
       >
         <motion.li variants={variants}>
-          <Link className='noLink' to='about'>
+          <Link className='noLink' to='projects'>
             Projects
           </Link>
         </motion.li>

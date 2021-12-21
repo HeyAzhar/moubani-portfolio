@@ -1,6 +1,7 @@
 import Me from "../../../Assets/me.jpg";
 import behance from "../../../Assets/Icons/behance.svg";
 import linkedin from "../../../Assets/Icons/linkedin.svg";
+import instagram from "../../../Assets/Icons/instagram.svg";
 import cook from "../../../Assets/Icons/cook.svg";
 import music from "../../../Assets/Icons/music.svg";
 import driving from "../../../Assets/Icons/driving.svg";
@@ -28,7 +29,7 @@ const About = () => {
                 target='_blank'
                 href='https://www.behance.net/IamMoubani'
               >
-                <img src={behance} alt='' />
+                <img style={{ marginBottom: "-24px" }} src={behance} alt='' />
               </a>
             </div>
             <div className='about__socialIcon'>
@@ -38,6 +39,15 @@ const About = () => {
                 href='https://www.linkedin.com/in/moubanircdesign'
               >
                 <img src={linkedin} alt='' />
+              </a>
+            </div>
+            <div className='about__socialIcon'>
+              <a
+                rel='noreferrer'
+                target='_blank'
+                href='https://www.instagram.com/moubani.uxdesign'
+              >
+                <img style={{ marginBottom: "-26px" }} src={instagram} alt='' />
               </a>
             </div>
           </div>
