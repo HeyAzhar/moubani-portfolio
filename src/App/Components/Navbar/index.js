@@ -19,6 +19,8 @@ const Navbar = () => {
     },
   };
 
+  const scrollToTop = () => window.scrollTo(0, 0);
+
   return (
     <div className='navbar__container'>
       {/* LOGO */}
@@ -29,7 +31,7 @@ const Navbar = () => {
         variants={variants}
         className='navbar__logo'
       >
-        <Link className='noLink' to='/'>
+        <Link onClick={scrollToTop} className='noLink' to='/'>
           <img className='navbar__logoImg' alt='' src={logo} />
         </Link>
       </motion.div>
@@ -43,27 +45,28 @@ const Navbar = () => {
         className='navbar__menuList'
       >
         <motion.li variants={variants}>
-          <Link className='noLink' to='projects'>
+          <Link onClick={scrollToTop} className='noLink' to='projects'>
             Projects
           </Link>
         </motion.li>
         <motion.li variants={variants}>
-          <Link className='noLink' to='ux-practice'>
+          <Link onClick={scrollToTop} className='noLink' to='ux-practice'>
             UX Studio Practices
           </Link>
         </motion.li>
         <motion.li variants={variants}>
-          <Link className='noLink' to='about'>
+          <Link onClick={scrollToTop} className='noLink' to='about'>
             Embrace
           </Link>
         </motion.li>
         <motion.li variants={variants}>
-          <Link className='noLink' to='about'>
+          <Link onClick={scrollToTop} className='noLink' to='about'>
             About
           </Link>
         </motion.li>
         <motion.li variants={variants} className='navbar__contactBtn'>
           <a
+            onClick={scrollToTop}
             className='noLink'
             rel='noreferrer'
             href='https://moubani.com/resume.pdf'
