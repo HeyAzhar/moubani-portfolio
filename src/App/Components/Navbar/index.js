@@ -65,7 +65,7 @@ const Navbar = () => {
         <motion.li variants={variants} className='navbar__contactBtn'>
           <a
             className='noLink'
-            rel='noopener'
+            rel='noreferrer'
             href='https://moubani.com/resume.pdf'
             target={"_blank"}
           >
