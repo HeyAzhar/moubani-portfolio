@@ -26,3 +26,19 @@
 .home__hero p {
   margin-top: 5em;
 }
+
+.homeFooter__container {
+  background-color: var(--tercary);
+  height: 60vh;
+  max-width: 100%;
+  margin-top: 5em;
+  padding: 0 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homeFooter__container p:first-child {
+  font-size: 3.8em;
+  margin-bottom: 0.5em;
+}

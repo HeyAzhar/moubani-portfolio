@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 import { variants } from "../../utils/animations";
 import "./styles.css";
@@ -13,16 +12,18 @@ const Footer = () => {
       variants={variants}
       className='footer__container'
     >
-      <motion.p variants={variants}>
-        I also <b>embrace</b> branding, designing advertisements and making
-        posters.
-      </motion.p>
-
-      <motion.p variants={variants}>
-        <Link className='noLink' to='/'>
-          see more
-        </Link>
-      </motion.p>
+      <a
+        className='noLink'
+        rel='noreferrer'
+        rel='noopener'
+        href='https://moubani.com/resume.pdf'
+        target={"_blank"}
+      >
+        Resume
+      </a>
+      <a className='noLink' href='mailto:roychoudhury.moubani@gmail.com'>
+        Contant me
+      </a>
     </motion.div>
   );
 };

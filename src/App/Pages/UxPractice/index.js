@@ -1,22 +1,20 @@
 import { useContext } from "react";
-import ProjectCard from "../../Components/ProjectCard";
 import { BlogsContext } from "../../utils/context";
+import ProjectCard from "../../Components/ProjectCard";
 import "./styles.css";
 
-const Projects = () => {
+const UxPractice = () => {
   const blogs = useContext(BlogsContext);
 
-  console.log({ blogs });
-
   return (
-    <div className='project__container'>
-      <div className='project__title'>
+    <div className='uxPractice__container'>
+      <div className='uxPractice__title'>
         <h1>
-          Taking briefs to collaborating, ideating on the paper presenting final
-          projects, I thoroughly <span>enjoy every step of the process</span>
+          At the <span>University of the Arts London</span>, we worked on
+          various collaborative studiio projects.
         </h1>
 
-        <h3>Projects</h3>
+        <h3>MA UX STUDIO PRACTICES</h3>
       </div>
 
       {blogs?.map((item) => (
@@ -33,4 +31,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default UxPractice;

@@ -48,7 +48,7 @@ const Navbar = () => {
           </Link>
         </motion.li>
         <motion.li variants={variants}>
-          <Link className='noLink' to='about'>
+          <Link className='noLink' to='ux-practice'>
             UX Studio Practices
           </Link>
         </motion.li>
@@ -62,11 +62,16 @@ const Navbar = () => {
             About
           </Link>
         </motion.li>
-        <Link className='noLink' to='about'>
-          <motion.li variants={variants} className='navbar__contactBtn'>
+        <motion.li variants={variants} className='navbar__contactBtn'>
+          <a
+            className='noLink'
+            rel='noopener'
+            href='https://moubani.com/resume.pdf'
+            target={"_blank"}
+          >
             Resume
-          </motion.li>
-        </Link>
+          </a>
+        </motion.li>
       </motion.ul>
     </div>
   );

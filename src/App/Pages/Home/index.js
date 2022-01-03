@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Footer from "../../Components/Footer";
+import { Link } from "react-router-dom";
 
 import { variants } from "../../utils/animations";
 import "./styles.css";
@@ -29,7 +29,18 @@ const Home = () => {
         className='home__horizontalLine'
       ></motion.div>
 
-      <Footer />
+      <motion.div variants={variants} className='homeFooter__container'>
+        <motion.p variants={variants}>
+          I also <b>embrace</b> branding, designing advertisements and making
+          posters.
+        </motion.p>
+
+        <motion.p variants={variants}>
+          <Link className='noLink' to='projects'>
+            see more
+          </Link>
+        </motion.p>
+      </motion.div>
     </div>
   );
 };
