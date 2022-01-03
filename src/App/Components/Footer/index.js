@@ -15,7 +15,6 @@ const Footer = () => {
       <a
         className='noLink'
         rel='noreferrer'
-        rel='noreferrer'
         href='https://moubani.com/resume.pdf'
         target={"_blank"}
       >
