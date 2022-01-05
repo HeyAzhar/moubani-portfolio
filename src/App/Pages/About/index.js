@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
 import Me from "../../../Assets/me.jpg";
-import behance from "../../../Assets/Icons/behance.svg";
-import linkedin from "../../../Assets/Icons/linkedin.svg";
-import instagram from "../../../Assets/Icons/instagram.svg";
 import cook from "../../../Assets/Icons/cook.svg";
 import music from "../../../Assets/Icons/music.svg";
 import driving from "../../../Assets/Icons/driving.svg";
 import teaTale from "../../../Assets/Icons/tea.svg";
 
 import Footer from "../../Components/Footer";
+import {
+  AiOutlineLinkedin,
+  AiOutlineBehanceSquare,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 
 import "./styles.css";
 
@@ -21,9 +24,22 @@ const About = () => {
           <div className='about__meText'>
             <h5>THAT'S ME</h5>
             <p>
-              I'm Moubani Roy Choudhury, a user experience designer and visual
-              artist currently doing MA in UX Design at the University of the
-              Arts London (2021-22).
+              I'm Moubani Roy Choudhury, a{" "}
+              <Link
+                style={{ color: "var(--primary)", textDecoration: "none" }}
+                to='/ux-practice'
+              >
+                user experience
+              </Link>{" "}
+              and{" "}
+              <Link
+                style={{ color: "var(--primary)", textDecoration: "none" }}
+                to='/projects'
+              >
+                digital product designer
+              </Link>{" "}
+              currently doing MA in UX Design at the University of the Arts
+              London (2021-22).
             </p>
 
             <div className='about__socialIconContainer'>
@@ -33,7 +49,9 @@ const About = () => {
                   target='_blank'
                   href='https://www.behance.net/IamMoubani'
                 >
-                  <img style={{ marginBottom: "-24px" }} src={behance} alt='' />
+                  <AiOutlineBehanceSquare
+                    style={{ fontSize: "3em", color: "var(--dark)" }}
+                  />
                 </a>
               </div>
               <div className='about__socialIcon'>
@@ -42,7 +60,9 @@ const About = () => {
                   target='_blank'
                   href='https://www.linkedin.com/in/moubanircdesign'
                 >
-                  <img src={linkedin} alt='' />
+                  <AiOutlineLinkedin
+                    style={{ fontSize: "3em", color: "var(--dark)" }}
+                  />
                 </a>
               </div>
               <div className='about__socialIcon'>
@@ -51,10 +71,8 @@ const About = () => {
                   target='_blank'
                   href='https://www.instagram.com/moubani.uxdesign'
                 >
-                  <img
-                    style={{ marginBottom: "-26px" }}
-                    src={instagram}
-                    alt=''
+                  <AiOutlineInstagram
+                    style={{ fontSize: "3em", color: "var(--dark)" }}
                   />
                 </a>
               </div>
@@ -74,23 +92,29 @@ const About = () => {
           <h3>MY STORY</h3>
 
           <p>
-            Born: Kolkata, India <br />
-            Studied: St. Xavier's College, Kolkata (India) <br />
-            University of the Arts London <br />
-            Living: London, UK <br />
+            <span style={{ color: "var(--primary)" }}>Born: </span>
+            <b>Kolkata, India</b> <br />
+            <span style={{ color: "var(--primary)" }}>Studied: </span>
+            <b>
+              University of the Arts London | St. Xavier's College, Kolkata
+              (India)
+            </b>
             <br />
-            From the age of 14, I knew that design was my passion. Since then, I
+            <span style={{ color: "var(--primary)" }}>Living: </span>
+            <b>London, UK</b>
+            <br />
+            <br />
+            From the age of 14, I knew that design was my bassion. Since then, I
             have been professionally active (in startups, NGOs and Advertising
-            agencies) with design being an inevitable part of my job.
-            <br />
-            <br /> I started my diverse journey in 2015. After interning at
-            Child Rights and You (CRY) and working in a managerial role in J
-            Thomas and Co. , I launched my first brand in 2017. Soon after, I
-            started my first job as a graphic designer, followed by internships
-            and then a job as a UX designer. Now, as a postgraduate student of
-            MA UX Design at the University of the Arts London, I seek to
-            question the conventional and create a mindset that'll help me
-            create meaningful products and experiences for all.
+            agencies) with design being an inevitable part of my job. I started
+            my diverse journey in 2015. After interning at Child Rights and You
+            (CRY) and working in a managerial role in J Thomas and Co. , I
+            launched my first brand in 2017. Soon after, I started my first job
+            as a graphic designer, followed by internships and then a job as a
+            UX designer. Now, as a postgraduate student of MA UX Design at the
+            University of the Arts London, I seek to question the conventional
+            and create a mindset that'll help me create meaningful products and
+            experiences for all.
           </p>
         </div>
 
@@ -105,8 +129,6 @@ const About = () => {
             seek to create inclusive design solutions. I enjoy collaborating
             with diverse teams and I see great value in team work. I like to
             present the experience as prototypes, mockups and case studies.
-            <br />
-            <br />
             During my career, I have taught myself to code in front-end
             languages. Generally I know the possibilities and restrictions of
             user interfaces and I know how to co-operate with teams.

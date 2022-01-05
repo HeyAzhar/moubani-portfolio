@@ -25,6 +25,7 @@
   font-size: 1em;
 }
 
-.uxPractice__title span {
+.uxPractice__title a {
   color: var(--primary);
+  text-decoration: none;
 }

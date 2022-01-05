@@ -13,16 +13,17 @@ const Footer = () => {
       className='footer__container'
     >
       <a
-        className='noLink'
+        className='footer__resume'
         rel='noreferrer'
         href='https://moubani.com/resume.pdf'
-        target={"_blank"}
+        target='_blank'
       >
         Resume
       </a>
       <a className='noLink' href='mailto:roychoudhury.moubani@gmail.com'>
-        Contant me
+        Contact me
       </a>
+      <button onClick={() => window.scrollTo(0, 0)}>Go to top</button>
     </motion.div>
   );
 };

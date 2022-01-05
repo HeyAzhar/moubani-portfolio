@@ -14,3 +14,18 @@
   font-weight: 600;
   color: var(--grey);
 }
+
+.footer__resume {
+  text-decoration: none;
+  color: var(--primary) !important;
+}
+
+.footer__container button {
+  background-color: var(--tercary);
+  border: none;
+  font-weight: 600;
+  color: var(--grey);
+  font-size: 1em;
+  text-decoration: underline;
+  cursor: pointer;
+}

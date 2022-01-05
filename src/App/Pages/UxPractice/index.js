@@ -5,15 +5,25 @@ import Footer from "../../Components/Footer";
 import "./styles.css";
 
 const UxPractice = () => {
-  const blogs = useContext(BlogsContext);
+  const blogsData = useContext(BlogsContext);
+  const blogs = blogsData.filter((v) =>
+    [...v.categories].includes("ux-studio-practices")
+  );
 
   return (
     <>
       <div className='uxPractice__container'>
         <div className='uxPractice__title'>
           <h1>
-            At the <span>University of the Arts London</span>, we worked on
-            various collaborative studiio projects.
+            At the{" "}
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.arts.ac.uk/about-ual/press-office/stories/ual-ranked-2nd-in-the-world-for-art-and-design-in-QS-world-university-rankings-2020-by-subject'
+            >
+              University of the Arts London
+            </a>
+            , we worked on various collaborative studio projects.
           </h1>
 
           <h3>MA UX STUDIO PRACTICES</h3>

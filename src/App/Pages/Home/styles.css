@@ -12,7 +12,7 @@
 }
 
 .home__hero {
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,4 +41,22 @@
 .homeFooter__container p:first-child {
   font-size: 3.8em;
   margin-bottom: 0.5em;
+}
+
+.home__cardContainer {
+  width: 70%;
+  margin: 0 15%;
+  margin-bottom: 4em;
+}
+
+.home__cardContainer h3 {
+  margin: 2em 0;
+  color: var(--grey);
+}
+
+.home__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
