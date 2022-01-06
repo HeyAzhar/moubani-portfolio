@@ -10,7 +10,3 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById("root")
 );
-
-// https://www.arts.ac.uk/
-
-// https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@roychoudhury-moubani
