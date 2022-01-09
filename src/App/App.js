@@ -15,14 +15,10 @@ const App = () => {
 
   const blogUrl = "https://api.rss2json.com/v1/api.json";
 
-  // mxstq0gcn3wonh7obydazmjyrddpvyyzcfgkebde;
-
   useEffect(() => {
     const fetchData = async () => {
       const result = await Axios.get(blogUrl, {
         params: {
-          count: 20,
-          api_key: "mdorksgay5osxqgfhootowcaurgiwmvedtecclq1",
           rss_url: "https://medium.com/feed/@moubaniroychoudhury",
         },
       });
