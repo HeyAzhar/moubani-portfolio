@@ -51,7 +51,9 @@
 
 .home__cardContainer h3 {
   margin: 2em 0;
-  color: var(--grey);
+  color: var(--primary);
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .home__cards {

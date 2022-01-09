@@ -1,33 +1,23 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../../Components/ProjectCard";
 import { motion } from "framer-motion";
 import { variants } from "../../utils/animations";
+import { BlogsContext } from "../../utils/context";
 
 import "./styles.css";
 
 const Home = () => {
-  const [projectBlogs, setProjectBlogs] = useState([]);
-  const [uxPracticeBlogs, setUxPracticeBlogs] = useState([]);
+  const blogsData = useContext(BlogsContext);
+  const projectBlogs = blogsData.filter(
+    (v) => ![...v.categories].includes("ux-studio-practices")
+  );
+  const uxPracticeBlogs = blogsData.filter((v) =>
+    [...v.categories].includes("ux-studio-practices")
+  );
 
-  const projectBlogUrl =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubaniroychoudhury";
+  const scrollToTop = () => window.scrollTo(0, 0);
 
-  const uxPracticeBlogUrl =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@roychoudhury-moubani";
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const projectResult = await axios(projectBlogUrl);
-      const uxPracticeResult = await axios(uxPracticeBlogUrl);
-
-      setProjectBlogs(projectResult?.data?.items);
-      setUxPracticeBlogs(uxPracticeResult?.data?.items);
-    };
-
-    fetchData();
-  }, []);
   return (
     <div className='home__container'>
       <motion.div
@@ -59,7 +49,13 @@ const Home = () => {
       ></motion.div>
 
       <div className='home__cardContainer'>
-        <h3>Projects</h3>
+        <Link
+          style={{ textDecoration: "none" }}
+          onClick={scrollToTop}
+          to='projects'
+        >
+          <h3>Projects</h3>
+        </Link>
 
         <div className='home__cards'>
           {projectBlogs?.slice(0, 4).map((item) => (
@@ -83,7 +79,13 @@ const Home = () => {
       ></motion.div>
 
       <div className='home__cardContainer'>
-        <h3>UX Studio Practices</h3>
+        <Link
+          style={{ textDecoration: "none" }}
+          onClick={scrollToTop}
+          to='ux-practice'
+        >
+          <h3>UX Studio Practices</h3>
+        </Link>
 
         <div className='home__cards'>
           {uxPracticeBlogs?.slice(0, 4).map((item) => (
@@ -101,8 +103,15 @@ const Home = () => {
 
       <motion.div variants={variants} className='homeFooter__container'>
         <motion.p variants={variants}>
-          I also <b style={{ color: "var(--primary)" }}>embrace</b> branding,
-          designing advertisements and making posters.
+          I also{" "}
+          <Link
+            onClick={() => window.scrollTo(0, 0)}
+            className='noLink'
+            to='embrace'
+          >
+            <b style={{ color: "var(--primary)" }}>embrace</b>
+          </Link>{" "}
+          branding, designing advertisements and making posters.
         </motion.p>
 
         <motion.p variants={variants}>

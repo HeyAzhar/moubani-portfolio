@@ -100,7 +100,7 @@ const About = () => {
 
         {/* STORY */}
 
-        <motion.div variants={variants} className='about__story'>
+        <motion.div variants={variants} className='about__data'>
           <h3>MY STORY</h3>
 
           <motion.p variants={variants}>
@@ -132,7 +132,7 @@ const About = () => {
 
         {/* APPROACH */}
 
-        <motion.div variants={variants} className='about__approach'>
+        <motion.div variants={variants} className='about__data'>
           <h3>APPROACH</h3>
 
           <motion.p variants={variants}>
@@ -149,7 +149,7 @@ const About = () => {
 
         {/* VALUES */}
 
-        <motion.div variants={variants} className='about__values'>
+        <motion.div variants={variants} className='about__data'>
           <h3>VALUES</h3>
 
           <motion.p variants={variants}>

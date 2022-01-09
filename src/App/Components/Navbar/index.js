@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useResolvedPath, useMatch } from "react-router-dom";
 
 import logo from "../../../Assets/logo.svg";
 import "./styles.css";
@@ -45,24 +45,24 @@ const Navbar = () => {
         className='navbar__menuList'
       >
         <motion.li variants={variants}>
-          <Link onClick={scrollToTop} className='noLink' to='projects'>
+          <NavLink onClick={scrollToTop} className='noLink' to='projects'>
             Projects
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={variants}>
-          <Link onClick={scrollToTop} className='noLink' to='ux-practice'>
+          <NavLink onClick={scrollToTop} className='noLink' to='ux-practice'>
             UX Studio Practices
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={variants}>
-          <Link onClick={scrollToTop} className='noLink' to='embrace'>
+          <NavLink onClick={scrollToTop} className='noLink' to='embrace'>
             Embrace
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={variants}>
-          <Link onClick={scrollToTop} className='noLink' to='about'>
+          <NavLink onClick={scrollToTop} className='noLink' to='about'>
             About
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={variants} className='navbar__contactBtn'>
           <a
@@ -81,3 +81,14 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const NavLink = ({ children, to, ...props }) => {
+  let resolved = useResolvedPath(to);
+  let match = useMatch({ path: resolved.pathname, end: true });
+
+  return (
+    <Link style={{ fontWeight: match ? "700" : "300" }} to={to} {...props}>
+      {children}
+    </Link>
+  );
+};

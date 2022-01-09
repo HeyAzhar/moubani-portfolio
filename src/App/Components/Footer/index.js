@@ -20,7 +20,11 @@ const Footer = () => {
       >
         Resume
       </a>
-      <a className='noLink' href='mailto:roychoudhury.moubani@gmail.com'>
+      <a
+        className='noLink'
+        style={{ color: "var(--dark)" }}
+        href='mailto:roychoudhury.moubani@gmail.com'
+      >
         Contact me
       </a>
       <button onClick={() => window.scrollTo(0, 0)}>Go to top</button>
