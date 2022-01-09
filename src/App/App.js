@@ -19,22 +19,19 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await Axios.get(
-        blogUrl,
-        JSON.stringify({
+      const result = await Axios.get(blogUrl, {
+        params: {
           count: 20,
           api_key: "mdorksgay5osxqgfhootowcaurgiwmvedtecclq1",
           rss_url: "https://medium.com/feed/@moubaniroychoudhury",
-        })
-      );
+        },
+      });
 
       setBlogs([...result?.data?.items]);
     };
 
     fetchData();
   }, []);
-
-  console.table(blogs);
 
   return (
     <>
