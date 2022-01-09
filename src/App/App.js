@@ -1,9 +1,10 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
 import BlogPage from "./Pages/BlogPage";
+import Embrace from "./Pages/Embrace";
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
 import UxPractice from "./Pages/UxPractice";
@@ -37,8 +38,10 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path='projects' element={<Projects />} />
           <Route path='ux-practice' element={<UxPractice />} />
-          <Route path='blog/:title' element={<BlogPage />} />
+          <Route path='embrace' element={<Embrace />} />
           <Route path='about' element={<About />} />
+          <Route path='blog/:title' element={<BlogPage />} />
+          <Route path='*' element={<NoPage />} />
         </Routes>
       </BlogsContext.Provider>
     </>
@@ -46,3 +49,13 @@ const App = () => {
 };
 
 export default App;
+
+const NoPage = () => {
+  return (
+    <div className='noPage'>
+      <h2>
+        Feeling lost? <Link to='/'>Go home</Link>
+      </h2>
+    </div>
+  );
+};

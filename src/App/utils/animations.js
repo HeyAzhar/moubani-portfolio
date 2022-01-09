@@ -6,8 +6,8 @@ exports.variants = {
     transition: {
       duration: 0.5,
       type: "tween",
-      when: "beforeChildren",
-      staggerChildren: 0.3,
+      // when: "beforeChildren",
+      staggerChildren: 0.2,
     },
   },
 };

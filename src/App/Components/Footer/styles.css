@@ -1,6 +1,7 @@
 .footer__container {
   width: 70%;
   height: 5em;
+  position: absolute;
   background-color: var(--tercary);
   margin-top: 3em;
   margin-bottom: -1em;

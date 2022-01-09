@@ -1,6 +1,6 @@
 .blogPage__container {
-  width: 60%;
-  margin: 0 20%;
+  width: 50%;
+  margin: 0 25%;
   height: 100%;
 }
 
@@ -23,5 +23,7 @@
 }
 
 .blogPage__content img {
-  max-width: 100%;
+  max-width: 80%;
+  margin: 1em 10%;
+  border-radius: 0.5em;
 }

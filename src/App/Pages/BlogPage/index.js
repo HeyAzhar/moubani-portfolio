@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { BlogsContext } from "../../utils/context";
 import Footer from "../../Components/Footer";
-import "./styles.css";
 import { useParams } from "react-router-dom";
+import { variants } from "../../utils/animations";
+import { motion } from "framer-motion";
+import "./styles.css";
 
 const BlogPage = () => {
   const blogsData = useContext(BlogsContext);
@@ -15,17 +17,23 @@ const BlogPage = () => {
 
   return (
     <>
-      <div className='blogPage__container'>
-        <div className='blogPage__header'>
+      <motion.div
+        initial='hidden'
+        whileInView='visible'
+        variants={variants}
+        className='blogPage__container'
+      >
+        <motion.div variants={variants} className='blogPage__header'>
           <h1>{blog[0]?.title}</h1>
           <p>{new Date(blog[0]?.pubDate).toDateString()}</p>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={variants}
           className='blogPage__content'
           dangerouslySetInnerHTML={{ __html: blog[0]?.content }}
         />
-      </div>
+      </motion.div>
       <Footer />
     </>
   );

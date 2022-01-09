@@ -1,10 +1,10 @@
 import axios from "axios";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../../Components/ProjectCard";
-
+import { motion } from "framer-motion";
 import { variants } from "../../utils/animations";
+
 import "./styles.css";
 
 const Home = () => {
@@ -108,8 +108,9 @@ const Home = () => {
         <motion.p variants={variants}>
           <Link
             className='noLink'
+            onClick={() => window.scrollTo(0, 0)}
             style={{ color: "var(--primary)" }}
-            to='projects'
+            to='embrace'
           >
             see more
           </Link>

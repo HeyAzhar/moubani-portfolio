@@ -1,8 +1,10 @@
 import ProjectCard from "../../Components/ProjectCard";
 import Footer from "../../Components/Footer";
-import "./styles.css";
 import { useContext } from "react";
 import { BlogsContext } from "../../utils/context";
+import { variants } from "../../utils/animations";
+import { motion } from "framer-motion";
+import "./styles.css";
 
 const Projects = () => {
   const blogsData = useContext(BlogsContext);
@@ -12,16 +14,21 @@ const Projects = () => {
 
   return (
     <>
-      <div className='project__container'>
-        <div className='project__title'>
-          <h1>
+      <motion.div
+        initial='hidden'
+        whileInView='visible'
+        variants={variants}
+        className='project__container'
+      >
+        <motion.div variants={variants} className='project__title'>
+          <motion.h1 variants={variants}>
             Taking briefs to collaborating, ideating on the paper to presenting
             final projects, I thoroughly{" "}
-            <span>enjoy every step of the process</span>
-          </h1>
+            <span>enjoy every step of the process.</span>
+          </motion.h1>
 
           <h3>Projects</h3>
-        </div>
+        </motion.div>
 
         {blogs?.map((item) => (
           <ProjectCard
@@ -33,7 +40,7 @@ const Projects = () => {
             timestamp={item.pubDate}
           />
         ))}
-      </div>
+      </motion.div>
       <Footer />
     </>
   );

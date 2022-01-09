@@ -55,7 +55,7 @@ const Navbar = () => {
           </Link>
         </motion.li>
         <motion.li variants={variants}>
-          <Link onClick={scrollToTop} className='noLink' to='about'>
+          <Link onClick={scrollToTop} className='noLink' to='embrace'>
             Embrace
           </Link>
         </motion.li>

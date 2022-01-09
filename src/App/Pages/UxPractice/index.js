@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { BlogsContext } from "../../utils/context";
 import ProjectCard from "../../Components/ProjectCard";
 import Footer from "../../Components/Footer";
+import { variants } from "../../utils/animations";
+import { motion } from "framer-motion";
 import "./styles.css";
 
 const UxPractice = () => {
@@ -12,9 +14,14 @@ const UxPractice = () => {
 
   return (
     <>
-      <div className='uxPractice__container'>
-        <div className='uxPractice__title'>
-          <h1>
+      <motion.div
+        initial='hidden'
+        whileInView='visible'
+        variants={variants}
+        className='uxPractice__container'
+      >
+        <motion.div variants={variants} className='uxPractice__title'>
+          <motion.h1 variants={variants}>
             At the{" "}
             <a
               target='_blank'
@@ -24,10 +31,10 @@ const UxPractice = () => {
               University of the Arts London
             </a>
             , we worked on various collaborative studio projects.
-          </h1>
+          </motion.h1>
 
           <h3>MA UX STUDIO PRACTICES</h3>
-        </div>
+        </motion.div>
 
         {blogs?.map((item) => (
           <ProjectCard
@@ -39,7 +46,7 @@ const UxPractice = () => {
             timestamp={item.pubDate}
           />
         ))}
-      </div>
+      </motion.div>
       <Footer />
     </>
   );
