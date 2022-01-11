@@ -75,7 +75,7 @@ const Home = () => {
         <Link
           className='noLink seeMore'
           onClick={() => window.scrollTo(0, 0)}
-          style={{ color: "var(--primary)" }}
+          style={{ color: "var(--primary)", marginBottom: "2em" }}
           to='projects'
         >
           see more <BsArrowRight />
