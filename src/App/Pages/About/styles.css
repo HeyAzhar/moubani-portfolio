@@ -115,3 +115,44 @@
   width: 5em;
   height: 5em;
 }
+
+@media (max-width: 648px) {
+  .about__container {
+    font-size: 1em;
+    width: 90%;
+    margin: 1em;
+  }
+
+  .about__me {
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+
+  .about__meImage {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1em;
+  }
+
+  .about__meImage img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .about__meText {
+    width: 100%;
+  }
+
+  .about__meText p {
+    margin-top: 0.8em;
+    font-size: 2em;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+
+  .about__funFact div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

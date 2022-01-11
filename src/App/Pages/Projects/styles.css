@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 2em 8em;
+  text-justify: center;
 }
 
 .project__title h1 {
@@ -27,4 +28,19 @@
 
 .project__title span {
   color: var(--primary);
+}
+
+@media (max-width: 648px) {
+  .project__container {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .project__title {
+    width: 100%;
+    min-height: 18em;
+    margin: 2em 0em;
+    margin-top: 4em;
+    font-size: 0.8em;
+  }
 }

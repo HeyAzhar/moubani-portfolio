@@ -46,7 +46,7 @@
 .home__cardContainer {
   width: 70%;
   margin: 0 15%;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
 }
 
 .home__cardContainer h3 {
@@ -61,4 +61,31 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+}
+
+@media (max-width: 648px) {
+  .home__hero {
+    height: 80vh;
+    padding: 2em;
+    text-align: center;
+  }
+
+  .home__hero h1 {
+    font-size: 3.5em;
+  }
+
+  .home__cardContainer {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .homeFooter__container {
+    margin-top: 1em;
+    padding: 2em 8%;
+    height: 50vh;
+  }
+
+  .homeFooter__container p:first-child {
+    font-size: 2em;
+  }
 }

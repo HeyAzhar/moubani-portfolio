@@ -22,10 +22,8 @@ const ProjectCard = ({ title, timestamp, thumbnail }) => {
       <img className='projectCard__img' src={thumbnail} alt='' />
 
       <motion.div variants={variants} className='projectCard__header'>
-        <motion.h1 variants={variants}>{title}</motion.h1>
-        <motion.p variants={variants}>
-          {new Date(timestamp).toDateString()}
-        </motion.p>
+        <h1 variants={variants}>{title}</h1>
+        <p variants={variants}>{new Date(timestamp).toDateString()}</p>
       </motion.div>
     </motion.div>
   );

@@ -69,19 +69,18 @@ const Home = () => {
               timestamp={item.pubDate}
             />
           ))}
-
-          <motion.p variants={variants}>
-            <Link
-              className='noLink seeMore'
-              onClick={() => window.scrollTo(0, 0)}
-              style={{ color: "var(--primary)" }}
-              to='projects'
-            >
-              see more <BsArrowRight />
-            </Link>
-          </motion.p>
         </div>
       </div>
+      <motion.p variants={variants}>
+        <Link
+          className='noLink seeMore'
+          onClick={() => window.scrollTo(0, 0)}
+          style={{ color: "var(--primary)" }}
+          to='projects'
+        >
+          see more <BsArrowRight />
+        </Link>
+      </motion.p>
 
       <motion.div
         initial='hidden'
@@ -98,7 +97,6 @@ const Home = () => {
         >
           <h3>UX Studio Practices</h3>
         </Link>
-
         <div className='home__cards'>
           {uxPracticeBlogs?.slice(0, 4).map((item) => (
             <ProjectCard
@@ -110,18 +108,18 @@ const Home = () => {
               timestamp={item.pubDate}
             />
           ))}
-          <motion.p variants={variants}>
-            <Link
-              className='noLink seeMore'
-              onClick={() => window.scrollTo(0, 0)}
-              to='ux-practice'
-            >
-              see more <BsArrowRight />
-            </Link>
-          </motion.p>
         </div>
       </div>
 
+      <motion.p variants={variants}>
+        <Link
+          className='noLink seeMore'
+          onClick={() => window.scrollTo(0, 0)}
+          to='ux-practice'
+        >
+          see more <BsArrowRight />
+        </Link>
+      </motion.p>
       <motion.div variants={variants} className='homeFooter__container'>
         <motion.p variants={variants}>
           I also{" "}
@@ -134,10 +132,16 @@ const Home = () => {
           </Link>{" "}
           branding, designing advertisements and making posters.
         </motion.p>
-
         <motion.p variants={variants}>
           <Link
-            className='noLink seeMore'
+            className='noLink'
+            style={{
+              display: "flex",
+              width: "6.5em",
+              justifyContent: "space-between",
+              alignItems: "center",
+              color: "var(--primary)",
+            }}
             onClick={() => window.scrollTo(0, 0)}
             to='embrace'
           >

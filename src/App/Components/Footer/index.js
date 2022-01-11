@@ -30,7 +30,9 @@ const Footer = () => {
         </a>
         <button onClick={() => window.scrollTo(0, 0)}>Go to top</button>
       </div>
-      <p style={{ color: "var(--grey)" }}> &copy; copyrights 2020</p>
+      <p style={{ color: "var(--grey)" }}>
+        Copyrights reserved &copy; {new Date().getFullYear()} By Moubani
+      </p>
     </motion.div>
   );
 };

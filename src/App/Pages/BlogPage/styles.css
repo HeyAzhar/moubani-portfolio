@@ -27,3 +27,28 @@
   margin: 1em 10%;
   border-radius: 0.5em;
 }
+
+.blogPage__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogPage__navigation p {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 648px) {
+  .blogPage__container {
+    width: 92%;
+    padding: 0 4%;
+    margin: 0;
+    height: 100%;
+  }
+
+  .blogPage__content img {
+    max-width: 90%;
+    margin: 1em 5%;
+  }
+}

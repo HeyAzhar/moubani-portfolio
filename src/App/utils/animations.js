@@ -1,8 +1,8 @@
 exports.variants = {
-  hidden: { opacity: 0, y: 0 },
+  hidden: { opacity: 0, y: 10 },
   visible: {
     opacity: 1,
-    y: -10,
+    y: 0,
     transition: {
       duration: 0.8,
       type: "tween",

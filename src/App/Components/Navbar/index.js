@@ -1,10 +1,19 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useResolvedPath, useMatch } from "react-router-dom";
+import { CgMenuRight, CgClose } from "react-icons/cg";
 
 import logo from "../../../Assets/logo.svg";
 import "./styles.css";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    window.scrollTo(0, 0);
+    setToggle(!toggle);
+  };
+
   const variants = {
     hidden: { opacity: 0, y: 0 },
     visible: {
@@ -31,9 +40,27 @@ const Navbar = () => {
         variants={variants}
         className='navbar__logo'
       >
-        <Link onClick={scrollToTop} className='noLink' to='/'>
-          <img className='navbar__logoImg' alt='' src={logo} />
+        <Link className='noLink' to='/'>
+          <img
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setToggle(false);
+            }}
+            className='navbar__logoImg'
+            alt=''
+            src={logo}
+          />
         </Link>
+      </motion.div>
+
+      <motion.div
+        initial='hidden'
+        animate='visible'
+        variants={variants}
+        className='navbar__menuIcon'
+        onClick={handleToggle}
+      >
+        {toggle ? <CgClose /> : <CgMenuRight />}
       </motion.div>
 
       {/* MENU */}
@@ -42,29 +69,35 @@ const Navbar = () => {
         initial='hidden'
         animate='visible'
         variants={variants}
-        className='navbar__menuList'
+        className={
+          toggle ? "showNav navbar__menuList" : "hideNav navbar__menuList"
+        }
       >
-        <motion.li variants={variants}>
+        <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='projects'>
             Projects
           </NavLink>
         </motion.li>
-        <motion.li variants={variants}>
+        <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='ux-practice'>
             UX Studio Practices
           </NavLink>
         </motion.li>
-        <motion.li variants={variants}>
+        <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='embrace'>
             Embrace
           </NavLink>
         </motion.li>
-        <motion.li variants={variants}>
+        <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='about'>
             About
           </NavLink>
         </motion.li>
-        <motion.li variants={variants} className='navbar__contactBtn'>
+        <motion.li
+          onClick={handleToggle}
+          variants={variants}
+          className='navbar__contactBtn'
+        >
           <a
             onClick={scrollToTop}
             className='noLink'

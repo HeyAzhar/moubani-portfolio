@@ -1,6 +1,6 @@
 .footer__container {
   width: 70%;
-  height: 5em;
+  min-height: 5em;
   position: absolute;
   background-color: var(--tercary);
   margin-top: 3em;
@@ -29,4 +29,16 @@
   font-size: 1em;
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media (max-width: 648px) {
+  .footer__container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer__container button {
+    margin: 2em 0;
+  }
 }
