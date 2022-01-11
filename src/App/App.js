@@ -13,17 +13,18 @@ import { BlogsContext } from "./utils/context";
 const App = () => {
   const [blogs, setBlogs] = useState([]);
 
-  const blogUrl = "https://api.rss2json.com/v1/api.json";
+  const uxPracticeUrl =
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@roychoudhury-moubani";
+
+  const projectsUrl =
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubaniroychoudhury";
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await Axios.get(blogUrl, {
-        params: {
-          rss_url: "https://medium.com/feed/@moubaniroychoudhury",
-        },
-      });
+      const result = await Axios(uxPracticeUrl);
+      const _result = await Axios(projectsUrl);
 
-      setBlogs([...result?.data?.items]);
+      setBlogs([...result?.data?.items, ..._result?.data?.items]);
     };
 
     fetchData();
