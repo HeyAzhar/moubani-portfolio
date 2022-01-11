@@ -7,6 +7,7 @@
   margin-bottom: -1em;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 15%;
 }
 
@@ -24,7 +25,6 @@
 .footer__container button {
   background-color: var(--tercary);
   border: none;
-  font-weight: 600;
   color: var(--grey);
   font-size: 1em;
   text-decoration: underline;

@@ -4,6 +4,7 @@ import ProjectCard from "../../Components/ProjectCard";
 import { motion } from "framer-motion";
 import { variants } from "../../utils/animations";
 import { BlogsContext } from "../../utils/context";
+import { BsArrowRight } from "react-icons/bs";
 
 import "./styles.css";
 
@@ -37,7 +38,7 @@ const Home = () => {
           >
             Moubani Roy Choudhury
           </Link>
-          , a user experience and digital product designer.
+          , a user experience and digital product designer, based in London.
         </motion.p>
       </motion.div>
 
@@ -68,6 +69,17 @@ const Home = () => {
               timestamp={item.pubDate}
             />
           ))}
+
+          <motion.p variants={variants}>
+            <Link
+              className='noLink seeMore'
+              onClick={() => window.scrollTo(0, 0)}
+              style={{ color: "var(--primary)" }}
+              to='projects'
+            >
+              see more <BsArrowRight />
+            </Link>
+          </motion.p>
         </div>
       </div>
 
@@ -98,6 +110,15 @@ const Home = () => {
               timestamp={item.pubDate}
             />
           ))}
+          <motion.p variants={variants}>
+            <Link
+              className='noLink seeMore'
+              onClick={() => window.scrollTo(0, 0)}
+              to='ux-practice'
+            >
+              see more <BsArrowRight />
+            </Link>
+          </motion.p>
         </div>
       </div>
 
@@ -116,12 +137,11 @@ const Home = () => {
 
         <motion.p variants={variants}>
           <Link
-            className='noLink'
+            className='noLink seeMore'
             onClick={() => window.scrollTo(0, 0)}
-            style={{ color: "var(--primary)" }}
             to='embrace'
           >
-            see more
+            see more <BsArrowRight />
           </Link>
         </motion.p>
       </motion.div>

@@ -12,22 +12,25 @@ const Footer = () => {
       variants={variants}
       className='footer__container'
     >
-      <a
-        className='footer__resume'
-        rel='noreferrer'
-        href='https://moubani.com/resume.pdf'
-        target='_blank'
-      >
-        Resume
-      </a>
-      <a
-        className='noLink'
-        style={{ color: "var(--dark)" }}
-        href='mailto:roychoudhury.moubani@gmail.com'
-      >
-        Contact me
-      </a>
-      <button onClick={() => window.scrollTo(0, 0)}>Go to top</button>
+      <div>
+        <a
+          className='footer__resume'
+          rel='noreferrer'
+          href='https://moubani.com/resume.pdf'
+          target='_blank'
+        >
+          Resume
+        </a>
+        <a
+          className='noLink'
+          style={{ color: "var(--dark)" }}
+          href='mailto:roychoudhury.moubani@gmail.com'
+        >
+          Contact me
+        </a>
+        <button onClick={() => window.scrollTo(0, 0)}>Go to top</button>
+      </div>
+      <p style={{ color: "var(--grey)" }}> &copy; copyrights 2020</p>
     </motion.div>
   );
 };

@@ -136,14 +136,15 @@ const About = () => {
           <h3>APPROACH</h3>
 
           <motion.p variants={variants}>
-            My motion.diverse backgrounds enables me to look beyond design. I am
-            passionate about experimenting with various research methods and
-            seek to create inclusive design solutions. I enjoy collaborating
-            with motion.diverse teams and I see great value in team work. I like
-            to present the experience as prototypes, mockups and case studies.
-            During my career, I have taught myself to code in front-end
-            languages. Generally I know the possibilities and restrictions of
-            user interfaces and I know how to co-operate with teams.
+            My range of experiences across social work, management,
+            entrepreneurship, graphic design, and UI/UX design enables me to
+            bring multiple lenses into my design orientation. As a person of
+            color who has studied Sociology and travelled to another continent,
+            I think about how inclusiveness can be mainstreamed within the
+            industry. <br />I like to present the experience as prototypes,
+            mockups, case studies and am comfortable with academic writing.
+            During my career, I learned basic front-end languages like HTML and
+            CSS and I collaborate well with developers.
           </motion.p>
         </motion.div>
 
@@ -153,9 +154,11 @@ const About = () => {
           <h3>VALUES</h3>
 
           <motion.p variants={variants}>
-            Empathetic, collaborative and committed, human loving extrovert with
-            a desire to learn more, have meaning conversations and keep an open
-            mind.
+            I am an empathetic extrovert with a desire to learn. I value
+            commitments and I enjoy collaborating with diverse teams. <br />I
+            enjoy exploring diverse mediums and my user-centered design approach
+            has taken me from exploring tangible interactions to designing
+            experiential environments.
           </motion.p>
         </motion.div>
 
