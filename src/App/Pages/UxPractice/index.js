@@ -30,7 +30,7 @@ const UxPractice = () => {
             >
               University of the Arts London
             </a>
-            , we worked on various collaborative studio projects.
+            , we worked on various collaborative projects.
           </motion.h1>
 
           <h3>MA UX STUDIO PRACTICES</h3>
