@@ -75,22 +75,22 @@ const Navbar = () => {
       >
         <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='projects'>
-            Projects
+            PROJECTS
           </NavLink>
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='ux-practice'>
-            UX Studio Practices
+            UX&nbsp;STUDIO
           </NavLink>
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='embrace'>
-            Embrace
+            EMBRACE
           </NavLink>
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='about'>
-            About
+            ABOUT
           </NavLink>
         </motion.li>
         <motion.li
@@ -105,7 +105,7 @@ const Navbar = () => {
             href='https://moubani.com/resume.pdf'
             target={"_blank"}
           >
-            Resume
+            RESUME
           </a>
         </motion.li>
       </motion.ul>

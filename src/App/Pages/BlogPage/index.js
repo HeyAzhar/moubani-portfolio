@@ -3,11 +3,11 @@ import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
 
 import { BlogsContext } from "../../utils/context";
-import Footer from "../../Components/Footer";
 import { useParams } from "react-router-dom";
 import { variants } from "../../utils/animations";
 import { motion } from "framer-motion";
 import "./styles.css";
+import "./stylesMedium.css";
 
 const BlogPage = () => {
   const blogsData = useContext(BlogsContext);
@@ -72,7 +72,6 @@ const BlogPage = () => {
           </motion.p>
         </motion.div>
       </motion.div>
-      <Footer />
     </>
   );
 };
