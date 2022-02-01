@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { BlogsContext } from "../../utils/context";
 import ProjectCard from "../../Components/ProjectCard";
-import Footer from "../../Components/Footer";
 import { variants } from "../../utils/animations";
 import { motion } from "framer-motion";
 import "./styles.css";
@@ -36,7 +35,7 @@ const UxPractice = () => {
           <h3>MA UX STUDIO PRACTICES</h3>
         </motion.div>
 
-        {blogs?.map((item) => (
+        {blogs?.map((item, index) => (
           <ProjectCard
             key={item.guid}
             title={item.title}
@@ -44,10 +43,10 @@ const UxPractice = () => {
             description={item.description}
             content={item.content}
             timestamp={item.pubDate}
+            width={Math.floor((index-1)/2)%2? 'wide' : 'narrow'}
           />
         ))}
       </motion.div>
-      <Footer />
     </>
   );
 };

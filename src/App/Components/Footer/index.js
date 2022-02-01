@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BsArrowUp } from "react-icons/bs";
 
 import { variants } from "../../utils/animations";
 import "./styles.css";
@@ -28,7 +29,10 @@ const Footer = () => {
         >
           Contact me
         </a>
-        <button onClick={() => window.scrollTo(0, 0)}>Go to top</button>
+        <button onClick={() => window.scrollTo(0, 0)} style={ { textDecoration: "none", fontFamily: "inherit"}}>
+          Go to top
+          <BsArrowUp />
+        </button>
       </div>
       <p style={{ color: "var(--grey)" }}>
         Copyrights reserved &copy; {new Date().getFullYear()} By Moubani
