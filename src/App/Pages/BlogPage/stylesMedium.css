@@ -1,0 +1,53 @@
+.blogPage__content a {
+    text-decoration: none;
+}
+
+/* .blogPage__content p>*:first-child:is(a)::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--dark);
+    margin-right: 0.3em;
+    border-radius: 50%;
+} */
+
+.blogPage__content p, .blogPage__content blockquote {
+    line-height: 2.4em;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+}
+
+.blogPage__content h4 {
+    font-size: 1.1em;
+    line-height: 2.5em;
+    margin-top: 0.7em;
+    margin-bottom: 0.1em;
+}
+
+.blogPage__content figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blogPage__content figure img {
+    margin: 1em 10%;
+    max-width: 80%;
+    border-radius: 0.5em;
+}
+
+.blogPage__content figure figcaption {
+    font-size: 0.8em;
+    color: var(--lightgrey);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.blogPage__content video {
+    display: flex;
+    margin: 1em auto;
+    max-width: 80%;
+    min-width: 60%;
+    border-radius: 0.5em;
+}

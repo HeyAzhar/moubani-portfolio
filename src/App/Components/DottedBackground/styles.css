@@ -1,0 +1,9 @@
+.dottedbackground {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.04;
+}

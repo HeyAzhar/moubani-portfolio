@@ -1,5 +1,4 @@
 import ProjectCard from "../../Components/ProjectCard";
-import Footer from "../../Components/Footer";
 import { useContext } from "react";
 import { BlogsContext } from "../../utils/context";
 import { variants } from "../../utils/animations";
@@ -30,7 +29,7 @@ const Projects = () => {
           <h3>Projects</h3>
         </motion.div>
 
-        {blogs?.map((item) => (
+        {blogs?.map((item, index) => (
           <ProjectCard
             key={item.guid}
             title={item.title}
@@ -38,10 +37,10 @@ const Projects = () => {
             description={item.description}
             content={item.content}
             timestamp={item.pubDate}
+            width={Math.floor((index+1)/2)%2? 'wide' : 'narrow'}
           />
         ))}
       </motion.div>
-      <Footer />
     </>
   );
 };

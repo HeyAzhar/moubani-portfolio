@@ -1,11 +1,12 @@
 .blogPage__container {
-  width: 50%;
-  margin: 0 25%;
+  /* width: 50%; */
+  /* margin: 0 25%; */
+  margin: 0 10%;
   height: 100%;
 }
 
 .blogPage__header {
-  margin: 3em 0;
+  margin: 3em 0 1em 0;
 }
 
 .blogPage__header p {
@@ -16,16 +17,7 @@
 .blogPage__content {
   display: flex;
   flex-direction: column;
-}
-
-.blogPage__content p {
   margin-bottom: 2em;
-}
-
-.blogPage__content img {
-  max-width: 80%;
-  margin: 1em 10%;
-  border-radius: 0.5em;
 }
 
 .blogPage__navigation {

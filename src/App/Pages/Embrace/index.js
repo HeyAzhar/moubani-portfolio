@@ -1,4 +1,3 @@
-import Footer from "../../Components/Footer";
 import { variants } from "../../utils/animations";
 import { motion } from "framer-motion";
 
@@ -57,7 +56,6 @@ const Embrace = () => {
           imageFour='/Assets/socialMedia/four.jpg'
         />
       </div>
-      <Footer />
     </>
   );
 };

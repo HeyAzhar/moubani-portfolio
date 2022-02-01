@@ -2,6 +2,7 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import About from "./Pages/About";
 import BlogPage from "./Pages/BlogPage";
 import Embrace from "./Pages/Embrace";
@@ -24,7 +25,28 @@ const App = () => {
       const result = await Axios(uxPracticeUrl);
       const _result = await Axios(projectsUrl);
 
-      setBlogs([...result?.data?.items, ..._result?.data?.items]);
+      const convertLinksToVideo = (data) => {
+        const replaceLinkWithVideo = (match, offset, string) => {
+          let hrefData = match.match(/href=('|")\s*.*("|')/g)[0];
+          let indexes = [];
+          for (let i = hrefData.length - 1; i >= 0; i--) {
+            if (hrefData[i] === '/')
+              indexes.push(i);
+          }
+          let id = hrefData.slice(indexes[1] + 1, indexes[0]);
+          let source = `https://drive.google.com/uc?id=${id}&export=download`;
+          return (`<video controls><source src=${source} type='video/mp4'></source></video>`);
+        }
+        return {
+          ...data,
+          content: data.content.replaceAll(/<a href=('|")\s*.*drive.google.com\s*.*("|')>\s*.*<\/a>/g, replaceLinkWithVideo)
+        };
+      }
+
+      setBlogs([
+        ...result?.data?.items.map(convertLinksToVideo),
+        ..._result?.data?.items.map(convertLinksToVideo)
+      ]);
     };
 
     fetchData();
@@ -43,6 +65,7 @@ const App = () => {
           <Route path='blog/:title' element={<BlogPage />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
+        <Footer />
       </BlogsContext.Provider>
     </>
   );
