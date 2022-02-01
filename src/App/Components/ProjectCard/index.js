@@ -13,7 +13,7 @@ const ProjectCard = ({ title, timestamp, thumbnail, ...props }) => {
   };
 
   const width = props.width && (
-    props.width === 'wide' ? '40em': '24em'
+    props.width === 'wide' ? '35em': '21em'
   );
 
   Object.keys(cards).every(elem =>{
