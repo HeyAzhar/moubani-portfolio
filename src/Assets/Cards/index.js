@@ -16,39 +16,39 @@ const cards = [
         image: require('./stickyreviews.png')
     },
     {
-        title: "UX OF BOREDOM: WEEK 1",
+        title: "EXPLORING THE VALUE OF BOREDOM",
         image: require('./ux of boredom 1.png')
     },
     {
-        title: "UX OF BOREDOM: WEEK 2",
+        title: "ANTI-BOREDOM CAPSULE (ABC)",
         image: require('./ux of boredom 2.png')
     },
     {
-        title: "SENSING THE INVISIBLE: UX OF HUMAN SENSES",
+        title: "SENSING THE INVISIBLE",
         image: require('./ux of human senses.png')
     },
     {
-        title: "UX OF PAPER: WEEK 1",
+        title: "EXPERIENCE OF PAPER",
         image: require('./ux of paper 1.png')
     },
     {
-        title: "UX OF PAPER: WEEK 2",
+        title: "EDIBLE JOURNAL 2021",
         image: require('./ux of paper 2.png')
     },
     {
-        title: "UX OF SKIN: WEEK 1",
+        title: "SKIN WORLD INTERFACE",
         image: require('./ux of skin 1.png')
     },
     {
-        title: "UX OF SKIN: WEEK 2",
+        title: "CELEBRATING ‘FESTIVE’",
         image: require('./ux of skin 2.png')
     },
     {
-        title: "UX OF YELLOW: WEEK 1",
+        title: "EXPLORING THE COLOUR YELLOW",
         image: require('./ux of yellow 1.png')
     },
     {
-        title: "UX OF YELLOW: WEEK 2",
+        title: "EMOJIS AND JAUNDICE",
         image: require('./ux of yellow 2.png')
     }
 ]
