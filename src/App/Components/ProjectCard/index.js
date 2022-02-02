@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import cards from '../../../Assets/Cards';
 import "./styles.css";
 
-const ProjectCard = ({ title, timestamp, thumbnail, ...props }) => {
+const ProjectCard = ({ title, timestamp, subtitle, thumbnail, ...props }) => {
   const navigate = useNavigate();
 
   const openBlog = () => {
@@ -13,12 +13,12 @@ const ProjectCard = ({ title, timestamp, thumbnail, ...props }) => {
   };
 
   const width = props.width && (
-    props.width === 'wide' ? '35em': '21em'
+    props.width === 'wide' ? '34em': '24em'
   );
 
-  Object.keys(cards).every(elem =>{
-    if (title.toLowerCase().indexOf(cards[elem].text.toLowerCase()) !== -1){
-      thumbnail = cards[elem].data;
+  cards.every(card => {
+    if (title.toLowerCase().indexOf(card.title.toLowerCase()) !== -1){
+      thumbnail = card.image;
       return false;
     }
     else 
@@ -44,7 +44,8 @@ const ProjectCard = ({ title, timestamp, thumbnail, ...props }) => {
 
       <motion.div variants={variants} className='projectCard__header'>
         <h1 variants={variants}>{title}</h1>
-        <p variants={variants}>{new Date(timestamp).toDateString()}</p>
+        {/* <p variants={variants}>{new Date(timestamp).toDateString()}</p> */}
+        <p variants={variants}>{subtitle}</p>
       </motion.div>
     </motion.div>
   );

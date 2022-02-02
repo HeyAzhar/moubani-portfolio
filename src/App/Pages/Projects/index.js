@@ -37,6 +37,7 @@ const Projects = () => {
             description={item.description}
             content={item.content}
             timestamp={item.pubDate}
+            subtitle={/(?:<.+?>)([^<>]*?)(?:<\/.*?>)/g.exec(item.content)[1]}
             width={Math.floor((index+1)/2)%2? 'wide' : 'narrow'}
           />
         ))}

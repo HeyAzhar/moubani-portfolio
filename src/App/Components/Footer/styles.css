@@ -26,9 +26,12 @@
   background-color: var(--tercary);
   border: none;
   color: var(--grey);
+  font-family: inherit;
   font-size: 1em;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }
 
 @media (max-width: 648px) {

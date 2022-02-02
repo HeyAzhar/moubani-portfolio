@@ -21,7 +21,7 @@
 }
 
 .home__hero h1 {
-  font-size: 4em;
+  font-size: 3.8em;
 }
 
 .home__hero p {
@@ -138,6 +138,31 @@
   font-size: 1.2em;
 }
 
+@media (max-width: 1320px) {
+  .home__meImage {
+    height: 15em;
+  }
+
+  .home__hero h1 {
+    font-size: 2.4em;
+  }
+
+  .home__top__text p {
+    line-height: unset;
+    font-size: 1em;
+    margin-top: 3em;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home__top {
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: unset;
+    width: unset;
+  }
+}
+
 @media (max-width: 648px) {
   .home__hero {
     height: 80vh;
@@ -163,6 +188,11 @@
     font-size: 2em;
   }
 
+  .home__top {
+    margin-left: unset;
+    margin-right: unset;
+  }
+
   .home__top__text p span{
     display: none;
   }
@@ -182,12 +212,5 @@
     border-radius: 5px;
     margin-bottom: 1em;
     height: 15em;
-  }
-}
-
-@media (max-width: 1100px) {
-  .home__top {
-    justify-content: unset;
-    width: unset;
   }
 }

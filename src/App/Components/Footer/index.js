@@ -29,7 +29,7 @@ const Footer = () => {
         >
           Contact me
         </a>
-        <button onClick={() => window.scrollTo(0, 0)} style={ { textDecoration: "none", fontFamily: "inherit"}}>
+        <button onClick={() => window.scrollTo(0, 0)}>
           Go to top
           <BsArrowUp />
         </button>
