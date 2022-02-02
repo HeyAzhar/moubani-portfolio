@@ -8,7 +8,7 @@ const cards = [
         image: require('./desidhaba.png')
     },
     {
-        title: "JAANO: INDIA’S CIVIC PARTICIPATION PLATFORM",
+        title: "JAANO INDIA",
         image: require('./jaano.png')
     },
     {
