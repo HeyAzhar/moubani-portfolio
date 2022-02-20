@@ -22,26 +22,22 @@ const Home = () => {
 
   const scrollToTop = () => window.scrollTo(0, 0);
 
-  const TEXTS = [
-    'Thinker',
-    'Designer',
-    'Story-Teller'
-  ];
+  const TEXTS = ["Thinker", "Designer", "Story-Teller"];
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    const intervalId = setInterval(() =>
-      setIndex(index => index + 1),
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
       3000 // every 3 seconds
     );
     return () => clearTimeout(intervalId);
   }, []);
 
-    // TODO: left align 'Hi I'm..'
-    // TODO: try 'Image bubble'
-    // TODO: left align all instances of see more
-    // TODO: Put top arrow next to Go to Top, change font
-    // TODO: About page: increase font-weight on links
-    // TODO: Change subtitles of cards
+  // TODO: left align 'Hi I'm..'
+  // TODO: try 'Image bubble'
+  // TODO: left align all instances of see more
+  // TODO: Put top arrow next to Go to Top, change font
+  // TODO: About page: increase font-weight on links
+  // TODO: Change subtitles of cards
 
   return (
     <div className='home__container'>
@@ -51,36 +47,51 @@ const Home = () => {
         variants={variants}
         className='home__hero'
       >
-        <motion.div className="home__top">
-          <motion.div className="home__top__text">
-            <motion.h1 variants={variants}>Creative&nbsp;
+        <motion.div className='home__top'>
+          <motion.div className='home__top__text'>
+            <motion.h1 variants={variants}>
+              Creative&nbsp;
               <TextTransition
-                inline={ true }
-                text={ TEXTS[index % TEXTS.length] }
-                springConfig={ presets.stiff }
-                style= {{ width: "auto" }}
+                inline={true}
+                text={TEXTS[index % TEXTS.length]}
+                springConfig={presets.stiff}
+                style={{ width: "auto" }}
               />
             </motion.h1>
             <motion.h1 variants={variants}>Problem Solver</motion.h1>
             <motion.p variants={variants}>
-              Hi, I'm{" "}
+              I'm{" "}
               <Link
                 to='/about'
-                style={{ fontWeight: 500, color: "var(--primary)", textDecoration: "none" }}
+                style={{
+                  fontWeight: 500,
+                  color: "var(--primary)",
+                  textDecoration: "none",
+                }}
               >
-                Moubani Roy Choudhury
+                Moubani
               </Link>
-              , a user experience<span><br/></span> and digital product designer, based in London.
+              , a Product Designer, passionate about understanding people and
+              connecting their stories with meaningful experiences through
+              diverse mediums- be it digital, physical, or virtual.
+              <br />
+              <br />
+              Before transitioning to UX, my background was in Sociology, art
+              direction, entrepreneurship, and visual design. I believe the best
+              experiences are those that guide, accommodate, are relevant and
+              inclusive.
             </motion.p>
           </motion.div>
-          <motion.div variants={variants} className='home__meImage' /*data-quote={ TEXTS[index % TEXTS.length] }*/>
+          <motion.div
+            variants={variants}
+            className='home__meImage' /*data-quote={ TEXTS[index % TEXTS.length] }*/
+          >
             <img className='home__meImage' src={Self} alt='self' />
           </motion.div>
         </motion.div>
 
         <DottedBackground />
       </motion.div>
-
 
       <motion.div
         initial='hidden'
@@ -108,7 +119,7 @@ const Home = () => {
               content={item.content}
               timestamp={item.pubDate}
               subtitle={/(?:<.+?>)([^<>]*?)(?:<\/.*?>)/g.exec(item.content)[1]}
-              width={Math.floor((index-1)/2)%2? 'wide' : 'narrow'}
+              width={Math.floor((index - 1) / 2) % 2 ? "wide" : "narrow"}
             />
           ))}
         </div>
@@ -149,7 +160,7 @@ const Home = () => {
               content={item.content}
               timestamp={item.pubDate}
               subtitle={/(?:<.+?>)([^<>]*?)(?:<\/.*?>)/g.exec(item.content)[1]}
-              width={Math.floor((index+1)/2)%2? 'wide' : 'narrow'}
+              width={Math.floor((index + 1) / 2) % 2 ? "wide" : "narrow"}
             />
           ))}
         </div>
@@ -166,15 +177,16 @@ const Home = () => {
 
       <motion.div variants={variants} className='homeFooter__container'>
         <motion.p variants={variants}>
-          I also{" "}
+          Some{" "}
           <Link
             onClick={() => window.scrollTo(0, 0)}
             className='noLink'
-            to='embrace'
+            to='more'
           >
-            <b style={{ color: "var(--primary)" }}>embrace</b>
+            <b style={{ color: "var(--primary)" }}>more</b>
           </Link>{" "}
-          branding, designing advertisements and making posters.
+          areas that I have explored are illustrations, branding,
+          advertisements, and handicrafts.
         </motion.p>
         <motion.p variants={variants}>
           <Link

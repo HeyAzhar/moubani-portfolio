@@ -30,22 +30,24 @@ const App = () => {
           let hrefData = match.match(/href=('|")\s*.*("|')/g)[0];
           let indexes = [];
           for (let i = hrefData.length - 1; i >= 0; i--) {
-            if (hrefData[i] === '/')
-              indexes.push(i);
+            if (hrefData[i] === "/") indexes.push(i);
           }
           let id = hrefData.slice(indexes[1] + 1, indexes[0]);
           let source = `https://drive.google.com/uc?id=${id}&export=download`;
-          return (`<video controls><source src=${source} type='video/mp4'></source></video>`);
-        }
+          return `<video controls><source src=${source} type='video/mp4'></source></video>`;
+        };
         return {
           ...data,
-          content: data.content.replaceAll(/<a href=('|")\s*.*drive.google.com\s*.*("|')>\s*.*<\/a>/g, replaceLinkWithVideo)
+          content: data.content.replaceAll(
+            /<a href=('|")\s*.*drive.google.com\s*.*("|')>\s*.*<\/a>/g,
+            replaceLinkWithVideo
+          ),
         };
-      }
+      };
 
       setBlogs([
         ...result?.data?.items.map(convertLinksToVideo),
-        ..._result?.data?.items.map(convertLinksToVideo)
+        ..._result?.data?.items.map(convertLinksToVideo),
       ]);
     };
 
@@ -58,9 +60,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route index element={<Home />} />
-          <Route path='projects' element={<Projects />} />
-          <Route path='ux-practice' element={<UxPractice />} />
-          <Route path='embrace' element={<Embrace />} />
+          <Route path='digital' element={<Projects />} />
+          <Route path='experiential' element={<UxPractice />} />
+          <Route path='more' element={<Embrace />} />
           <Route path='about' element={<About />} />
           <Route path='blog/:title' element={<BlogPage />} />
           <Route path='*' element={<NoPage />} />

@@ -74,18 +74,18 @@ const Navbar = () => {
         }
       >
         <motion.li onClick={handleToggle} variants={variants}>
-          <NavLink onClick={scrollToTop} className='noLink' to='projects'>
-            PROJECTS
+          <NavLink onClick={scrollToTop} className='noLink' to='digital'>
+            DIGITAL
           </NavLink>
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
-          <NavLink onClick={scrollToTop} className='noLink' to='ux-practice'>
-            UX&nbsp;STUDIO
+          <NavLink onClick={scrollToTop} className='noLink' to='experiential'>
+            EXPERIENTIAL
           </NavLink>
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
-          <NavLink onClick={scrollToTop} className='noLink' to='embrace'>
-            EMBRACE
+          <NavLink onClick={scrollToTop} className='noLink' to='more'>
+            MORE
           </NavLink>
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
