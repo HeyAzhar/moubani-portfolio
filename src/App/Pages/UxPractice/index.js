@@ -21,15 +21,8 @@ const UxPractice = () => {
       >
         <motion.div variants={variants} className='uxPractice__title'>
           <motion.h1 variants={variants}>
-            At the{" "}
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.arts.ac.uk/about-ual/press-office/stories/ual-ranked-2nd-in-the-world-for-art-and-design-in-QS-world-university-rankings-2020-by-subject'
-            >
-              University of the Arts London
-            </a>
-            , we worked on various collaborative projects.
+            Designing experiences that guide, accommodate, are relevant and
+            inclusive, in collaboration with diverse teams.
           </motion.h1>
 
           <h3>MA UX STUDIO PRACTICES</h3>
@@ -44,7 +37,7 @@ const UxPractice = () => {
             content={item.content}
             timestamp={item.pubDate}
             subtitle={/(?:<.+?>)([^<>]*?)(?:<\/.*?>)/g.exec(item.content)[1]}
-            width={Math.floor((index-1)/2)%2? 'wide' : 'narrow'}
+            width={Math.floor((index - 1) / 2) % 2 ? "wide" : "narrow"}
           />
         ))}
       </motion.div>

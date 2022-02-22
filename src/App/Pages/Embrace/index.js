@@ -14,8 +14,7 @@ const Embrace = () => {
           className='embrace__title'
         >
           <motion.h1 variants={variants}>
-            I also <span>embrace</span> branding, designing advertisements and
-            making posters.
+            I enjoy telling stories through visual mediums.
           </motion.h1>
         </motion.div>
 

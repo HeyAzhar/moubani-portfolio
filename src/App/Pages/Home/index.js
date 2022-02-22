@@ -8,6 +8,11 @@ import { BsArrowRight } from "react-icons/bs";
 import DottedBackground from "../../Components/DottedBackground";
 import ProjectCard from "../../Components/ProjectCard";
 import Self from "../../../Assets/self.svg";
+import {
+  AiOutlineLinkedin,
+  AiOutlineBehanceSquare,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 
 import "./styles.css";
 
@@ -73,14 +78,85 @@ const Home = () => {
               </Link>
               , a Product Designer, passionate about understanding people and
               connecting their stories with meaningful experiences through
-              diverse mediums- be it digital, physical, or virtual.
+              diverse mediums- be it{" "}
+              <Link
+                to='/digital'
+                style={{
+                  fontWeight: 500,
+                  color: "var(--primary)",
+                  textDecoration: "none",
+                }}
+              >
+                digital
+              </Link>{" "}
+              ,{" "}
+              <Link
+                to='/experiential'
+                style={{
+                  fontWeight: 500,
+                  color: "var(--primary)",
+                  textDecoration: "none",
+                }}
+              >
+                physical
+              </Link>
+              , or virtual.
               <br />
               <br />
               Before transitioning to UX, my background was in Sociology, art
-              direction, entrepreneurship, and visual design. I believe the best
-              experiences are those that guide, accommodate, are relevant and
-              inclusive.
+              direction, entrepreneurship, and{" "}
+              <Link
+                to='/more'
+                style={{
+                  fontWeight: 500,
+                  color: "var(--primary)",
+                  textDecoration: "none",
+                }}
+              >
+                visual design
+              </Link>
+              . I believe the best experiences are those that guide,
+              accommodate, are relevant and inclusive.
             </motion.p>
+
+            <motion.div
+              variants={variants}
+              className='about__socialIconContainer'
+            >
+              <motion.div variants={variants} className='about__socialIcon'>
+                <a
+                  rel='noreferrer'
+                  target='_blank'
+                  href='https://www.behance.net/IamMoubani'
+                >
+                  <AiOutlineBehanceSquare
+                    style={{ fontSize: "3em", color: "var(--dark)" }}
+                  />
+                </a>
+              </motion.div>
+              <motion.div variants={variants} className='about__socialIcon'>
+                <a
+                  rel='noreferrer'
+                  target='_blank'
+                  href='https://www.linkedin.com/in/moubanircdesign'
+                >
+                  <AiOutlineLinkedin
+                    style={{ fontSize: "3em", color: "var(--dark)" }}
+                  />
+                </a>
+              </motion.div>
+              <motion.div variants={variants} className='about__socialIcon'>
+                <a
+                  rel='noreferrer'
+                  target='_blank'
+                  href='https://www.instagram.com/moubani.uxdesign'
+                >
+                  <AiOutlineInstagram
+                    style={{ fontSize: "3em", color: "var(--dark)" }}
+                  />
+                </a>
+              </motion.div>
+            </motion.div>
           </motion.div>
           <motion.div
             variants={variants}
@@ -88,6 +164,8 @@ const Home = () => {
           >
             <img className='home__meImage' src={Self} alt='self' />
           </motion.div>
+
+          {/* here */}
         </motion.div>
 
         <DottedBackground />
@@ -104,9 +182,9 @@ const Home = () => {
         <Link
           style={{ textDecoration: "none" }}
           onClick={scrollToTop}
-          to='projects'
+          to='digital'
         >
-          <h3>Recent Projects</h3>
+          <h3>Product Design</h3>
         </Link>
 
         <div className='home__cards'>
@@ -130,7 +208,7 @@ const Home = () => {
             style={{ color: "var(--primary)", marginBottom: "2em" }}
             to='projects'
           >
-            see more <BsArrowRight />
+            Explore case studies <BsArrowRight />
           </Link>
         </motion.p>
       </div>
@@ -146,9 +224,9 @@ const Home = () => {
         <Link
           style={{ textDecoration: "none" }}
           onClick={scrollToTop}
-          to='ux-practice'
+          to='experiential'
         >
-          <h3>UX Studio Practices</h3>
+          <h3>Experience Design</h3>
         </Link>
         <div className='home__cards'>
           {uxPracticeBlogs?.slice(0, 4).map((item, index) => (
@@ -170,7 +248,7 @@ const Home = () => {
             onClick={() => window.scrollTo(0, 0)}
             to='ux-practice'
           >
-            see more <BsArrowRight />
+            Explore case studies <BsArrowRight />
           </Link>
         </motion.p>
       </div>

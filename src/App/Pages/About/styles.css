@@ -76,6 +76,10 @@
   margin: 3em 0;
 }
 
+.about__funFact {
+  margin-bottom: 3em;
+}
+
 .about__funFact div {
   display: flex;
   justify-content: space-between;

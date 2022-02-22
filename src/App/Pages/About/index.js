@@ -31,15 +31,23 @@ const About = () => {
             <motion.p variants={variants}>
               I'm Moubani Roy Choudhury, a{" "}
               <Link
-                style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600 }}
-                to='/ux-practice'
+                style={{
+                  color: "var(--primary)",
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                to='/experiential'
               >
                 user experience
               </Link>{" "}
               and{" "}
               <Link
-                style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600 }}
-                to='/projects'
+                style={{
+                  color: "var(--primary)",
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                to='/digital'
               >
                 digital product designer
               </Link>{" "}
@@ -115,9 +123,23 @@ const About = () => {
             <b>London, UK</b>
             <br />
             <br />
-            I've always been creative and curious. I started my diverse journey in 2015 as an intern in Child Rights and You (CRY) where I helped them with posters and submitted a research paper. After this, I worked managerial role in a tea auction house where I trained and led a team of 6. I also developed marketing strategies and recruited team members. 
-            <br /><br />In 2017, I launched my design brand Mbony India and the overwhelming response encouraged me to become a full-time designer. I started as an art director, and then went on to design UI projects. Currently I'm a UX designer, creating meaningful products and experiences.
-            <br /><br />With a multitude of interests and creative pursuits in life, I have found in UX design the possibility to blend my passions for design, technology, and business, with my deep curiosity for human behavior.
+            I've always been creative and curious. I started my diverse journey
+            in 2015 as an intern in Child Rights and You (CRY) where I helped
+            them with posters and submitted a research paper. After this, I
+            worked managerial role in a tea auction house where I trained and
+            led a team of 6. I also developed marketing strategies and recruited
+            team members.
+            <br />
+            <br />
+            In 2017, I launched my design brand Mbony India and the overwhelming
+            response encouraged me to become a full-time designer. I started as
+            an art director, and then went on to design UI projects. Currently
+            I'm a UX designer, creating meaningful products and experiences.
+            <br />
+            <br />
+            With a multitude of interests and creative pursuits in life, I have
+            found in UX design the possibility to blend my passions for design,
+            technology, and business, with my deep curiosity for human behavior.
           </motion.p>
         </motion.div>
 
@@ -127,8 +149,15 @@ const About = () => {
           <h3>APPROACH</h3>
 
           <motion.p variants={variants}>
-          My range of experiences across social work, management, entrepreneurship, graphic design, and UI/UX design enables me to bring multiple lenses into my design orientation. As a person of color who has studied Sociology and travelled to another continent, I think about how inclusiveness can be mainstreamed within the industry.
-          <br /><br />I like to present the experience as prototypes, mockups, case studies and am comfortable with academic writing. 
+            My range of experiences across social work, management,
+            entrepreneurship, graphic design, and UI/UX design enables me to
+            bring multiple lenses into my design orientation. As a person of
+            color who has studied Sociology and travelled to another continent,
+            I think about how inclusiveness can be mainstreamed within the
+            industry.
+            <br />
+            <br />I like to present the experience as prototypes, mockups, case
+            studies and am comfortable with academic writing.
           </motion.p>
         </motion.div>
 
@@ -138,9 +167,18 @@ const About = () => {
           <h3>VALUES</h3>
 
           <motion.p variants={variants}>
-          I am an empathetic extrovert and enjoy collaborating with diverse teams. I thrive on learning, exploring, and mastering new skills and I'm happiest when I'm bringing disparate ideas together in creative ways to solve problems that create impact.
-          <br /><br />I enjoy exploring diverse mediums and my user-centered design approach has taken me from exploring tangible interactions to designing experiential environments.
-          <br /><br />When not working, I can be found talking to my plants, painting, cooking new recipes or doodling on my bullet journal.
+            I am an empathetic extrovert and enjoy collaborating with diverse
+            teams. I thrive on learning, exploring, and mastering new skills and
+            I'm happiest when I'm bringing disparate ideas together in creative
+            ways to solve problems that create impact.
+            <br />
+            <br />I enjoy exploring diverse mediums and my user-centered design
+            approach has taken me from exploring tangible interactions to
+            designing experiential environments.
+            <br />
+            <br />
+            When not working, I can be found talking to my plants, painting,
+            cooking new recipes or doodling on my bullet journal.
           </motion.p>
         </motion.div>
 
