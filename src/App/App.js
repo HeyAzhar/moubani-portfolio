@@ -22,10 +22,10 @@ const App = () => {
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubaniroychoudhury";
 
   const fmp =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubanifmp";
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubanifmp1";
 
   const fmp1 =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubanifmp1";
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubanifmp";
 
   useEffect(() => {
     const fetchData = async () => {
