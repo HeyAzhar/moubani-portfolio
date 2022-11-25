@@ -9,23 +9,32 @@ import Embrace from "./Pages/Embrace";
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
 import UxPractice from "./Pages/UxPractice";
+import Fmp from "./Pages/Fmp";
 import { BlogsContext } from "./utils/context";
 
 const App = () => {
   const [blogs, setBlogs] = useState([]);
 
-  const uxPracticeUrl =
+  const projectsUrl =
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@roychoudhury-moubani";
 
-  const projectsUrl =
+  const uxPracticeUrl =
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubaniroychoudhury";
+
+  const fmp =
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubanifmp";
+
+  const fmp1 =
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@moubanifmp1";
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await Axios(uxPracticeUrl);
-      const _result = await Axios(projectsUrl);
+      const uxResult = await Axios(uxPracticeUrl);
+      const projectResult = await Axios(projectsUrl);
+      const fmpResult = await Axios(fmp);
+      const fmp1Result = await Axios(fmp1);
 
-      const convertLinksToVideo = (data) => {
+      const convertLinksToVideo = (data, type) => {
         const replaceLinkWithVideo = (match, offset, string) => {
           let hrefData = match.match(/href=('|")\s*.*("|')/g)[0];
           let indexes = [];
@@ -38,6 +47,7 @@ const App = () => {
         };
         return {
           ...data,
+          type,
           content: data.content.replaceAll(
             /<a href=('|")\s*.*drive.google.com\s*.*("|')>\s*.*<\/a>/g,
             replaceLinkWithVideo
@@ -46,8 +56,16 @@ const App = () => {
       };
 
       setBlogs([
-        ...result?.data?.items.map(convertLinksToVideo),
-        ..._result?.data?.items.map(convertLinksToVideo),
+        ...uxResult?.data?.items.map((data) => convertLinksToVideo(data, "ux")),
+        ...projectResult?.data?.items.map((data) =>
+          convertLinksToVideo(data, "project")
+        ),
+        ...fmpResult?.data?.items.map((data) =>
+          convertLinksToVideo(data, "fmp")
+        ),
+        ...fmp1Result?.data?.items.map((data) =>
+          convertLinksToVideo(data, "fmp")
+        ),
       ]);
     };
 
@@ -62,6 +80,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path='digital' element={<Projects />} />
           <Route path='experiential' element={<UxPractice />} />
+          <Route path='fmp' element={<Fmp />} />
           <Route path='more' element={<Embrace />} />
           <Route path='about' element={<About />} />
           <Route path='blog/:title' element={<BlogPage />} />

@@ -5,9 +5,9 @@ import { variants } from "../../utils/animations";
 import { motion } from "framer-motion";
 import "./styles.css";
 
-const Projects = () => {
+const Fmp = () => {
   const blogsData = useContext(BlogsContext);
-  const blogs = blogsData.filter((v) => v.type === "project");
+  const blogs = blogsData.filter((v) => v.type === "fmp");
 
   return (
     <>
@@ -19,12 +19,12 @@ const Projects = () => {
       >
         <motion.div variants={variants} className='project__title'>
           <motion.h1 variants={variants}>
-            Taking briefs to collaborating, ideating on the paper to presenting
-            final projects, I thoroughly{" "}
-            <span>enjoy every step of the process.</span>
+            As a part of my Final project at UAL, I explored the use of smell as
+            a design medium and designed a toolkit for expression and creation
+            of (collective) memory archives.
           </motion.h1>
 
-          <h3>Projects</h3>
+          <h3>FINAL MAJOR PROJECT</h3>
         </motion.div>
 
         {blogs?.map((item, index) => (
@@ -44,4 +44,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Fmp;

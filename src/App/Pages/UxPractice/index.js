@@ -7,9 +7,7 @@ import "./styles.css";
 
 const UxPractice = () => {
   const blogsData = useContext(BlogsContext);
-  const blogs = blogsData.filter((v) =>
-    [...v.categories].includes("ux-studio-practices")
-  );
+  const blogs = blogsData.filter((v) => v.type === "ux");
 
   return (
     <>

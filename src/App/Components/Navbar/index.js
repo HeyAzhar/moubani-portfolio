@@ -80,7 +80,12 @@ const Navbar = () => {
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
           <NavLink onClick={scrollToTop} className='noLink' to='experiential'>
-            EXPERIENTIAL
+            UX STUDIO
+          </NavLink>
+        </motion.li>
+        <motion.li onClick={handleToggle} variants={variants}>
+          <NavLink onClick={scrollToTop} className='noLink' to='fmp'>
+            FMP
           </NavLink>
         </motion.li>
         <motion.li onClick={handleToggle} variants={variants}>
